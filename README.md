@@ -1,3 +1,5 @@
+![Python application](https://github.com/JacekPs/pyafka/workflows/Python%20application/badge.svg)
+
 # pyafka
 Pyafka is a utility to receive Kafka events in python service. It uses confluent_kafka under the hood.
 

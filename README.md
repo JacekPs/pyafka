@@ -3,6 +3,9 @@
 
 # pyafka
 Pyafka is a utility to receive Kafka events in python service. It uses confluent_kafka under the hood.
+Grab it from Pypi:
+https://pypi.org/project/pyafka/
+
 
 To use - annotate your handler method as follows:
 

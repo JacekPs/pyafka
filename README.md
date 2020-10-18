@@ -25,7 +25,7 @@ def handler(message):
 
 2: Specify payload deserializer. Currently available are BytesDeserializer and StringDeserializer (default)  
 ```
-@kafka_consumer("broker_url", ["my_topic", "my_other_topic], deserializer=BytesDeserializer.deserialize")
+@kafka_consumer("broker_url", ["my_topic", "my_other_topic], deserializer=BytesDeserializer().deserialize")
 def handler(message):
     print(message.value())
 ```

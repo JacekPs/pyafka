@@ -10,6 +10,8 @@ https://pypi.org/project/pyafka/
 To use - annotate your handler method as follows:
 
 ```
+from pyafkalib.pyafka import kafka_consumer
+
 @kafka_consumer("broker_url", ["my_topic", "some_other_topic])
 def handler(message):
     print(message.value())
@@ -18,6 +20,8 @@ You can pass additional arguments to '@kafka_consumer decorator'.
 
 1: Specify kafka consumer group (defaut group is random UUID):
 ```
+from pyafkalib.pyafka import kafka_consumer
+
 @kafka_consumer("broker_url", ["my_topic", "my_other_topic], group_id="my_group_id")
 def handler(message):
     print(message.value())
@@ -25,6 +29,9 @@ def handler(message):
 
 2: Specify payload deserializer. Currently available are BytesDeserializer and StringDeserializer (default)  
 ```
+from pyafkalib.pyafka import kafka_consumer
+from pyafkalib.deserializers import BytesDeserializer
+
 @kafka_consumer("broker_url", ["my_topic", "my_other_topic], deserializer=BytesDeserializer().deserialize")
 def handler(message):
     print(message.value())
